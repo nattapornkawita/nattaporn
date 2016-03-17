@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="scotchApp">
+
+<head>
+    <!-- SCROLLS -->
+    <!-- load bootstrap and fontawesome via CDN -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+
+    <!-- SPELLS -->
+    <!-- load angular via CDN -->
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-route.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body ng-controller="homeController">
+
+    <!-- HEADER AND NAVBAR -->
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Angular Routing Example</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#main">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+
+    <div id="main">
+        <div ng-view></div>
+    </div>
+</body>
+
+</html>
