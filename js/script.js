@@ -2,10 +2,10 @@
 
 // create the module and name it scotchApp
 // also include ngRoute for all our routing needs
-var scotchApp = angular.module('scotchApp', ['ngRoute']);
+var app = angular.module('angularLearning', ['ngRoute']);
 
 // configure our routes
-scotchApp.config(function($routeProvider) {
+app.config(function($routeProvider) {
     $routeProvider
 
         // .when('/', {
@@ -37,15 +37,15 @@ scotchApp.config(function($routeProvider) {
 });
 
 // create the controller and inject Angular's $scope
-scotchApp.controller('homeController', function($scope) {
+app.controller('homeController', function($scope) {
     // create a message to display in our view
     $scope.message = 'home';
 });
 
-scotchApp.controller('aboutController', function($scope) {
+app.controller('aboutController', function($scope) {
     $scope.message = 'about';
 });
 
-scotchApp.controller('contactController', function($scope) {
+app.controller('contactController', function($scope) {
     $scope.message = 'contact';
 });
